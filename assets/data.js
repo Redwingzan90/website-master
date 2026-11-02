@@ -177,6 +177,7 @@ window.KORR_DATA = {
         }
       ],
       "images": [
+        "images/properties/539th-baseline/unnamed",
         "images/properties/539th-baseline/20260207_111719",
         "images/properties/539th-baseline/20260207_111721",
         "images/properties/539th-baseline/20260207_111724",
@@ -231,7 +232,13 @@ window.KORR_DATA = {
           "terms": "$650 down · $650/mo"
         }
       ],
-      "images": [],
+      "images": [
+        "images/properties/property4/Screenshot_20260427_163951_Facebook",
+        "images/properties/property4/Screenshot_20260427_163954_Facebook",
+        "images/properties/property4/Screenshot_20260427_163957_Facebook",
+        "images/properties/property4/Screenshot_20260427_163959_Facebook",
+        "images/properties/property4/Screenshot_20260427_164002_Facebook"
+      ],
       "highlights": [
         "$59,000 Cash Only",
         "1 Lot Available",
@@ -283,7 +290,14 @@ window.KORR_DATA = {
           "status": "sold"
         }
       ],
-      "images": [],
+      "images": [
+        "images/properties/property5/20260124_161741",
+        "images/properties/property5/20260124_161743",
+        "images/properties/property5/20260124_161752",
+        "images/properties/property5/20260124_161755",
+        "images/properties/property5/20260124_161757",
+        "images/properties/property5/unnamed"
+      ],
       "highlights": [
         "3 Lots Available",
         "$59,900 Cash Only",
@@ -515,7 +529,13 @@ window.KORR_DATA = {
           "status": "sold"
         }
       ],
-      "images": [],
+      "images": [
+        "images/properties/487th-north/20260124_164822",
+        "images/properties/487th-north/20260124_164824",
+        "images/properties/487th-north/20260124_164825",
+        "images/properties/487th-north/20260124_164827",
+        "images/properties/487th-north/20260124_164832"
+      ],
       "highlights": [
         "1 of 2 lots available",
         "$650 Down / $650 Monthly",
