@@ -1,0 +1,27 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": "1",
+        "title": "Capturing full-site print images",
+        "description": "Capture full-page PNG screenshots of every published page and save them under C:\\Users\\davis\\Downloads\\Printing.",
+        "details": "Render every sitemap page locally at print-appropriate desktop width, capture full-page images with assets loaded, then verify outputs and mark the task done.",
+        "testStrategy": "",
+        "status": "done",
+        "dependencies": [],
+        "priority": "medium",
+        "subtasks": [],
+        "updatedAt": "2026-10-24T16:08:52.013Z"
+      }
+    ],
+    "metadata": {
+      "version": "1.0.0",
+      "lastModified": "2026-10-24T16:08:52.014Z",
+      "taskCount": 1,
+      "completedCount": 1,
+      "tags": [
+        "master"
+      ]
+    }
+  }
+}
