@@ -46,6 +46,8 @@
   /* --------------------------------------------------------------- helpers */
   const w640 = (i) => /\.(webp|png|jpe?g)$/i.test(i) ? i : i + '-640.webp'
   const w1280 = (i) => /\.(webp|png|jpe?g)$/i.test(i) ? i : i + '-1280.webp'
+  const imagesFor = (p) => (p.images || []).filter(image =>
+    p.id !== 8 || image !== 'images/properties/property8/harquahala-survey')
   const num = (s) => parseFloat(String(s || '').replace(/[^0-9.]/g, '')) || 0
   const openLots = (p) => (p.lots || []).filter(l => l.status === 'available').length
   const totalLots = (p) => (p.lots || []).length
@@ -77,7 +79,7 @@
 
   function instrumentHTML (p, i) {
     const st = status(p)
-    const imgs = p.images || []
+    const imgs = imagesFor(p)
     const parcel = p.parcel
       ? 'Parcel ' + esc(p.parcel)
       : (p.lots || []).some(l => l.parcel) ? 'Parcel numbers by lot' : 'Parcel on file'
@@ -179,7 +181,7 @@
     // Remember the row itself, not whatever happened to be focused.
     lastFocus = trigger || document.activeElement
     const st = status(p)
-    const imgs = p.images || []
+    const imgs = imagesFor(p)
     gal = { imgs, i: 0 }
     // The live site routes AZ and TX enquiries to different lines. Keep that.
     const region = (D.contacts && D.contacts.byRegion && D.contacts.byRegion[p.location]) ||

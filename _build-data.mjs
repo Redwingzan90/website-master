@@ -14,6 +14,9 @@ const owner = []      // things only the owner can decide, surfaced at the end
 
 const properties = snap.properties.filter(p => !p.isHouse && arizonaLocations.has(p.location)).map(p => {
   const out = { ...p }
+  if (out.id === 8) {
+    out.images = (out.images || []).filter(image => image !== 'images/properties/property8/harquahala-survey')
+  }
   const dest = PHOTO_TARGET[p.id]
   if (dest && newPhotos[dest]) {
     const fresh = newPhotos[dest].bases.filter(b => !(out.images || []).includes(b))

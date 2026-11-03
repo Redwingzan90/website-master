@@ -35,6 +35,7 @@ for (const before of expectedProperties) {
   for (const [k, v] of Object.entries(before)) {
     if (k === 'images') {
       for (const img of v) {
+        if (before.id === 8 && img === 'images/properties/property8/harquahala-survey') continue
         if (!after.images.includes(img)) problems.push(`#${before.id} photograph LOST from the site: ${img}`)
       }
       continue
@@ -73,6 +74,9 @@ const expectedFaqs = snap.faqs.map(faq => faq.q === 'What interest rate do you c
   ? { ...faq, a: 'Arizona properties are financed at 12% interest.' }
   : faq)
 if (JSON.stringify(expectedFaqs) !== JSON.stringify(live.faqs)) problems.push('FAQ content changed')
+if ((byId.get(8)?.images || []).includes('images/properties/property8/harquahala-survey')) {
+  problems.push('Property #8 Harquahala map included in the gallery')
+}
 
 if (live.properties.some(p => p.isHouse || !arizonaLocations.has(p.location))) {
   problems.push('non-Arizona or house listing included in published inventory')
