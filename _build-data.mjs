@@ -1,6 +1,5 @@
 // Builds published property data from the authoritative snapshot.
 import fs from 'node:fs'
-import crypto from 'node:crypto'
 
 const snap = JSON.parse(fs.readFileSync('data.snapshot.json', 'utf8'))
 const newPhotos = JSON.parse(fs.readFileSync('_new-photos.json', 'utf8'))
@@ -25,10 +24,6 @@ const properties = snap.properties.filter(p => !p.isHouse && arizonaLocations.ha
   }
   return out
 })
-
-// Preserve all property photos on their property entries.
-// We intentionally do not cross-property de-duplicate here because the site
-// needs every property's own gallery to remain fully populated.
 
 // Align availability highlights with each property's lot statuses.
 const COUNT_RE = /^(all|\d+)\s+(lots?|parcels?)\s+available$/i
